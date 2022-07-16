@@ -1,0 +1,226 @@
+{
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:village_name",
+ "creation": "2020-05-12 13:40:05.895363",
+ "description": "FPO Village Details",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "state",
+  "district",
+  "column_break_4",
+  "mandal",
+  "gram_panchayat",
+  "village_name",
+  "population_details_section",
+  "female",
+  "male",
+  "column_break_8",
+  "total_population",
+  "households",
+  "land_details_section",
+  "common_land",
+  "forest_area",
+  "column_break_13",
+  "total_acreage",
+  "water_bodies_section",
+  "tanks",
+  "column_break_19",
+  "borewells",
+  "column_break_21",
+  "canals",
+  "column_break_23",
+  "open_wells",
+  "section_break_25",
+  "nearest_marketyard",
+  "column_break_27",
+  "distance_from_fpo"
+ ],
+ "fields": [
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "District",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mandal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Mandal",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "gram_panchayat",
+   "fieldtype": "Link",
+   "label": "Gram Panchayat",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "village_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Village Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "population_details_section",
+   "fieldtype": "Section Break",
+   "label": "Population Details"
+  },
+  {
+   "fieldname": "female",
+   "fieldtype": "Int",
+   "label": "Female"
+  },
+  {
+   "fieldname": "male",
+   "fieldtype": "Int",
+   "label": "Male"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_population",
+   "fieldtype": "Read Only",
+   "label": "Total Population"
+  },
+  {
+   "fieldname": "households",
+   "fieldtype": "Int",
+   "label": "Total Households"
+  },
+  {
+   "fieldname": "land_details_section",
+   "fieldtype": "Section Break",
+   "label": "Land Details"
+  },
+  {
+   "fieldname": "common_land",
+   "fieldtype": "Float",
+   "label": "Common Land"
+  },
+  {
+   "fieldname": "forest_area",
+   "fieldtype": "Float",
+   "label": "Forest Area"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_acreage",
+   "fieldtype": "Read Only",
+   "label": "Total Acreage"
+  },
+  {
+   "fieldname": "water_bodies_section",
+   "fieldtype": "Section Break",
+   "label": "Water Bodies"
+  },
+  {
+   "fieldname": "tanks",
+   "fieldtype": "Int",
+   "label": "Tanks"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "borewells",
+   "fieldtype": "Int",
+   "label": "Borewells"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "canals",
+   "fieldtype": "Int",
+   "label": "Canals"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "open_wells",
+   "fieldtype": "Int",
+   "label": "Open wells"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nearest_marketyard",
+   "fieldtype": "Data",
+   "label": "Nearest Marketyard"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "distance_from_fpo",
+   "fieldtype": "Int",
+   "label": "Distance from FPO"
+  }
+ ],
+ "modified": "2022-07-16 22:11:58.696977",
+ "modified_by": "Administrator",
+ "module": "Sahaja Customization",
+ "name": "Village",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FPO User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Agriculture",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "village_name",
+ "track_changes": 1
+}

@@ -1,0 +1,222 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-05-12 17:18:34.680865",
+ "description": "FPO Member Land Details",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "farmer",
+  "column_break_3",
+  "village_name",
+  "section_break_5",
+  "is_organic",
+  "land",
+  "area_in_acres",
+  "organic_type",
+  "pgs_group_id",
+  "ics_group_id",
+  "details_if_others",
+  "land_type",
+  "soil_health_card",
+  "column_break_15",
+  "ownership",
+  "land_holding_start",
+  "land_holding_end",
+  "lease_amount",
+  "leased_out",
+  "patta_passbook_no",
+  "survey_number",
+  "section_break_23",
+  "irrigation",
+  "column_break_25",
+  "irrigation_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "MLID-"
+  },
+  {
+   "fetch_from": "farmer.farmer",
+   "fieldname": "farmer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Farmer Name",
+   "options": "FPO Member"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "village_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Village",
+   "options": "Village"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_organic",
+   "fieldtype": "Check",
+   "label": "Is Organic"
+  },
+  {
+   "fieldname": "land",
+   "fieldtype": "Link",
+   "label": "Land Name",
+   "options": "Location"
+  },
+  {
+   "fieldname": "area_in_acres",
+   "fieldtype": "Int",
+   "label": "Area in acres"
+  },
+  {
+   "depends_on": "is_organic",
+   "fieldname": "organic_type",
+   "fieldtype": "Select",
+   "label": "Organic Type",
+   "options": "\nPGS\nICS\nNPM\nOthers"
+  },
+  {
+   "depends_on": "eval:(doc.organic_type==\"PGS\")",
+   "fieldname": "pgs_group_id",
+   "fieldtype": "Data",
+   "label": "PGS Group ID"
+  },
+  {
+   "depends_on": "eval:(doc.organic_type==\"ICS\")",
+   "fieldname": "ics_group_id",
+   "fieldtype": "Data",
+   "label": "ICS Group ID"
+  },
+  {
+   "depends_on": "eval: in_list([\"Others\", \"NPM\"], doc.organic_type)\n",
+   "fieldname": "details_if_others",
+   "fieldtype": "Data",
+   "label": "Details if Others"
+  },
+  {
+   "fieldname": "land_type",
+   "fieldtype": "Select",
+   "label": "Soil Type",
+   "options": "\nBlack\nRed\nProblematic"
+  },
+  {
+   "fieldname": "soil_health_card",
+   "fieldtype": "Select",
+   "label": "Soil Health Card",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ownership",
+   "fieldtype": "Select",
+   "label": "Ownership",
+   "options": "\nOwn\nLeased\nAssigned\nForest Rights Act\nOther"
+  },
+  {
+   "fieldname": "land_holding_start",
+   "fieldtype": "Date",
+   "label": "Land Holding Start"
+  },
+  {
+   "fieldname": "land_holding_end",
+   "fieldtype": "Date",
+   "label": "Land Holding End"
+  },
+  {
+   "depends_on": "eval:(doc.ownership=='Leased')",
+   "fieldname": "lease_amount",
+   "fieldtype": "Float",
+   "label": "Lease Amount"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:(doc.ownership=='Own')",
+   "fieldname": "leased_out",
+   "fieldtype": "Check",
+   "label": "Leased Out"
+  },
+  {
+   "fieldname": "patta_passbook_no",
+   "fieldtype": "Data",
+   "label": "Patta Passbook No"
+  },
+  {
+   "fieldname": "survey_number",
+   "fieldtype": "Data",
+   "label": "Survey Number"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "irrigation",
+   "fieldtype": "Select",
+   "label": "Irrigation",
+   "options": "\nIrrigated\nDry"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:(doc.irrigation==\"Irrigated\")",
+   "fieldname": "irrigation_type",
+   "fieldtype": "Select",
+   "label": "Irrigation Type",
+   "options": "\nCanals\nTanks\nTubewells\nWells\nOthers"
+  }
+ ],
+ "modified": "2022-07-16 22:11:45.393073",
+ "modified_by": "Administrator",
+ "module": "Sahaja Customization",
+ "name": "Member Land",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FPO User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "land",
+ "track_changes": 1
+}

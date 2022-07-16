@@ -1,0 +1,92 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-05-12 15:36:06.828455",
+ "description": "Farmer Field Visit",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "village",
+  "column_break_3",
+  "person_visited",
+  "field_visit_details_section",
+  "field_visit_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "FV-"
+  },
+  {
+   "fetch_from": "village_id.village_name",
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Village",
+   "options": "Village",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "person_visited",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Person Visited",
+   "reqd": 1
+  },
+  {
+   "fieldname": "field_visit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Field Visit Details"
+  },
+  {
+   "fieldname": "field_visit_details",
+   "fieldtype": "Table",
+   "label": "Field Visits",
+   "options": "FV"
+  }
+ ],
+ "modified": "2022-07-16 22:09:28.697613",
+ "modified_by": "Administrator",
+ "module": "Sahaja Customization",
+ "name": "Field Visit",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FPO User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "village",
+ "track_changes": 1
+}

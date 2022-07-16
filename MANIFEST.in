@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include sahaja_customization *.css
+recursive-include sahaja_customization *.csv
+recursive-include sahaja_customization *.html
+recursive-include sahaja_customization *.ico
+recursive-include sahaja_customization *.js
+recursive-include sahaja_customization *.json
+recursive-include sahaja_customization *.md
+recursive-include sahaja_customization *.png
+recursive-include sahaja_customization *.py
+recursive-include sahaja_customization *.svg
+recursive-include sahaja_customization *.txt
+recursive-exclude sahaja_customization *.pyc

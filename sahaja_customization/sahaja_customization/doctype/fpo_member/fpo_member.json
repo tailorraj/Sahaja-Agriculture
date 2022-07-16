@@ -1,0 +1,333 @@
+{
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2020-05-12 11:46:59.659355",
+ "description": "FPO Member Details",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_details_section",
+  "naming_series",
+  "farmer",
+  "father_or_husband_name",
+  "gender",
+  "column_break_6",
+  "educational_qualification",
+  "category",
+  "contact_details_section",
+  "contact_number",
+  "type_of_phone",
+  "email_address",
+  "column_break_11",
+  "address",
+  "village_name",
+  "identification_details_section",
+  "aadhar",
+  "column_break_18",
+  "ration_card",
+  "column_break_20",
+  "voter_id",
+  "column_break_22",
+  "nrega_card_no",
+  "fpo_details_section",
+  "fpo_name",
+  "date_of_joining",
+  "no_of_shares_held_in_fpo",
+  "data_14",
+  "share_capital_held_in_fpo_in_rs",
+  "member_of_any_group",
+  "land_details_section",
+  "farmer_type",
+  "column_break_32",
+  "total_landholding_in_acres",
+  "column_break_34",
+  "organic_offered",
+  "column_break_37",
+  "land_record_khatha_number",
+  "insurance_asset_details",
+  "life_insurance",
+  "type_of_farm_asset",
+  "column_break_36",
+  "other_assets",
+  "asset_insurance"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "FM-.YY.-"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "farmer.member_name",
+   "fieldname": "farmer",
+   "fieldtype": "Link",
+   "label": "Farmer",
+   "options": "Member",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "father_or_husband_name",
+   "fieldtype": "Data",
+   "label": "Father or Husband Name"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nTransgender",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "educational_qualification",
+   "fieldtype": "Select",
+   "label": "Educational Qualification",
+   "options": "\nIlliterate\nSecondary\nDiploma\nGraduate\nPost Graduate\nOthers"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "\nSC\nST\nMinority\nOBC\nOC\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contact Number",
+   "length": 10,
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_of_phone",
+   "fieldtype": "Select",
+   "label": "Type of Phone Using",
+   "length": 10,
+   "options": "\nBasic Phone\nSmartphone"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address "
+  },
+  {
+   "fieldname": "village_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Village",
+   "options": "Village",
+   "reqd": 1
+  },
+  {
+   "fieldname": "identification_details_section",
+   "fieldtype": "Section Break",
+   "label": "Identification Details"
+  },
+  {
+   "fieldname": "aadhar",
+   "fieldtype": "Data",
+   "label": "Aadhar",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ration_card",
+   "fieldtype": "Data",
+   "label": "Ration Card"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "voter_id",
+   "fieldtype": "Data",
+   "label": "Voter ID"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nrega_card_no",
+   "fieldtype": "Data",
+   "label": "NREGA Card No"
+  },
+  {
+   "fieldname": "fpo_details_section",
+   "fieldtype": "Section Break",
+   "label": "FPO Details"
+  },
+  {
+   "fieldname": "fpo_name",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "FPO Name",
+   "options": "Company"
+  },
+  {
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Date of Joining",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "no_of_shares_held_in_fpo",
+   "fieldtype": "Int",
+   "label": "No. of Shares held in FPO"
+  },
+  {
+   "fieldname": "data_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "share_capital_held_in_fpo_in_rs",
+   "fieldtype": "Float",
+   "label": "Share capital held in FPO (in Rs)"
+  },
+  {
+   "fieldname": "member_of_any_group",
+   "fieldtype": "Select",
+   "label": "Member of Any Group",
+   "options": "\nFarmers Club\nJoint Liability Group\nFederation\nSelf Help Group\nVWC\nWADI\nOthers"
+  },
+  {
+   "fieldname": "land_details_section",
+   "fieldtype": "Section Break",
+   "label": "Land Details"
+  },
+  {
+   "fieldname": "farmer_type",
+   "fieldtype": "Select",
+   "label": "Farmer Type",
+   "options": "\nTenant\nSmall\nMarginal\nPoorest of Poor"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_landholding_in_acres",
+   "fieldtype": "Float",
+   "label": "Total Landholding in Acres"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "organic_offered",
+   "fieldtype": "Float",
+   "label": "Organic Offered"
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "land_record_khatha_number",
+   "fieldtype": "Data",
+   "label": "Land Record Khatha Number "
+  },
+  {
+   "fieldname": "insurance_asset_details",
+   "fieldtype": "Section Break",
+   "label": "Insurance & Asset Details"
+  },
+  {
+   "fieldname": "life_insurance",
+   "fieldtype": "Select",
+   "label": "Life Insurance",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "type_of_farm_asset",
+   "fieldtype": "Select",
+   "label": "Type of Farm Asset",
+   "options": "\nPump Set\nSolar Pump Sets\nMicro Irrigation\nStorage Godown\nTransport Vehicle\nTractor\nPower Tiller\nOthers"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_assets",
+   "fieldtype": "Data",
+   "label": "Other Assets"
+  },
+  {
+   "fieldname": "asset_insurance",
+   "fieldtype": "Select",
+   "label": "Asset Insurance",
+   "options": "\nYes\nNo"
+  }
+ ],
+ "modified": "2022-07-16 22:11:27.797701",
+ "modified_by": "Administrator",
+ "module": "Sahaja Customization",
+ "name": "FPO Member",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FPO User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Agriculture",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "farmer",
+ "track_changes": 1
+}

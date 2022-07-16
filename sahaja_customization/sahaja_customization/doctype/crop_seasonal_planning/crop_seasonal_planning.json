@@ -1,0 +1,187 @@
+{
+ "allow_rename": 1,
+ "autoname": "naming_series",
+ "creation": "2020-05-12 18:49:59.517089",
+ "description": "Seasonal Planning of Crop ",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "season",
+  "column_break_3",
+  "farmer",
+  "column_break_7",
+  "land",
+  "section_break_3",
+  "crop_name",
+  "column_break_8",
+  "variety",
+  "input_details_section",
+  "seed_cost",
+  "column_break_13",
+  "inputs_cost",
+  "financial_details_section",
+  "crop_loan",
+  "crop_loan_source",
+  "crop_insurance",
+  "column_break_14",
+  "investment_loan",
+  "investment_loan_source"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series"
+  },
+  {
+   "fieldname": "season",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Season",
+   "options": "\nKharif/Vaanakalam\nRabi/Yasangi\nSummer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "farmer.farmer",
+   "fieldname": "farmer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Farmer",
+   "options": "FPO Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "land.land",
+   "fieldname": "land",
+   "fieldtype": "Link",
+   "label": "Land",
+   "options": "Member Land"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "crop_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Crop",
+   "options": "Crop",
+   "report_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "variety",
+   "fieldtype": "Data",
+   "label": "Variety"
+  },
+  {
+   "fieldname": "input_details_section",
+   "fieldtype": "Section Break",
+   "label": "Input Details"
+  },
+  {
+   "fieldname": "seed_cost",
+   "fieldtype": "Currency",
+   "label": "Seed Cost"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inputs_cost",
+   "fieldtype": "Currency",
+   "label": "Inputs Cost"
+  },
+  {
+   "fieldname": "financial_details_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Details"
+  },
+  {
+   "fieldname": "crop_loan",
+   "fieldtype": "Currency",
+   "label": "Crop Loan Amount"
+  },
+  {
+   "fieldname": "crop_loan_source",
+   "fieldtype": "Select",
+   "label": "Crop Loan Source",
+   "options": "\nCommercial Bank\nCoop. Bank\nRRB\nPvt. Bank\nMFI\nMoney Lender\nInput Dealer\nFriend/Relatives\nOthers"
+  },
+  {
+   "fieldname": "crop_insurance",
+   "fieldtype": "Select",
+   "label": "Crop Insurance",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "investment_loan",
+   "fieldtype": "Currency",
+   "label": "Investment Amount Loan"
+  },
+  {
+   "fieldname": "investment_loan_source",
+   "fieldtype": "Select",
+   "label": "Investment Loan Source",
+   "options": "\nMoney Lender\nFriend/Relatives\nOthers"
+  }
+ ],
+ "modified": "2022-07-16 22:11:04.977179",
+ "modified_by": "Administrator",
+ "module": "Sahaja Customization",
+ "name": "Crop Seasonal Planning",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FPO User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "crop_name",
+ "track_changes": 1
+}
